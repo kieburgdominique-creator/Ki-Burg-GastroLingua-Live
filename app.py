@@ -1198,7 +1198,7 @@ def seed_demo_users():
             ('dominik-in','Dominique Kieburg (Innendienst)','Innendienst','de','','Innendienst-Demo-26!',0),
         ]
         for username,name,role,lang,restaurant,password,is_owner in rows:
-            con.execute('INSERT INTO users(username,display_name,role,lang,restaurant,password_hash,active,is_owner) VALUES(?,?,?,?,?,?,1,?)',
+            con.execute('INSERT OR IGNORE INTO users(username,display_name,role,lang,restaurant,password_hash,active,is_owner) VALUES(?,?,?,?,?,?,1,?)',
                         (username,name,role,lang,restaurant,pw_hash(password),is_owner))
     con.commit(); con.close()
 
