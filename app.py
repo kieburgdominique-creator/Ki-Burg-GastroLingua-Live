@@ -140,7 +140,8 @@ st.markdown("""
 :root { --gl-navy:#102b43; --gl-teal:#13a99a; --gl-bg:#f4f7f9; --gl-ink:#1d3343; }
 .stApp { background:var(--gl-bg); color:var(--gl-ink); }
 [data-testid="stSidebar"] { background:var(--gl-navy); }
-[data-testid="stSidebar"] * { color:#f3f8fb; }
+[data-testid="stSidebar"] p, [data-testid="stSidebar"] summary { color:#f3f8fb !important; }
+[data-testid="stSidebar"] button, [data-testid="stSidebar"] button *, [data-testid="stSidebar"] [data-baseweb="select"] *, [data-testid="stSidebar"] [data-testid="stAlert"] *, [data-testid="stSidebar"] code { color:var(--gl-navy) !important; }
 [data-testid="stSidebar"] label { color:#e1edf2 !important; font-weight:600; }
 .block-container { max-width:1500px; padding-top:3rem !important; padding-bottom:7rem; }
 /* Fix: prevent the page title/banner from sitting underneath Streamlit top chrome. */
